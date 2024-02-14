@@ -3,9 +3,10 @@ import { useResetPassword } from '../hooks';
 import { Button } from '../../../components/Button/Button';
 
 export const Form: React.FC = () => {
-  const { newPassword, onPasswordChange } = useResetPassword();
+  const { newPassword, onPasswordChange, isButtonPressed, onDonePress } = useResetPassword();
   console.log(newPassword);
 
+  // passwordのlengthがない、もしくは10字以上なければtrue(disableの意味で)
   const onButtonClick = () => {
     console.log(newPassword);
   };
@@ -23,8 +24,21 @@ export const Form: React.FC = () => {
           onChange={(event) => onPasswordChange(event.target.value)}
         />
       </div>
-      <Button onClick={onButtonClick} style={{ width: '100%', backgroundColor: 'red', padding: '0px', margin: '0px' }}>
-        Done
+      <Button
+        isDisabled={newPassword.length && newPassword.length >= 10 ? false : true}
+        isPressed={isButtonPressed}
+        onClick={onDonePress}
+        style={{
+          width: '100%',
+          backgroundColor: 'white',
+          padding: '10px',
+          margin: '0px',
+          borderRadius: '5px',
+          border: 'none',
+          cursor: 'pointer',
+        }}
+      >
+        Submit
       </Button>
     </div>
   );

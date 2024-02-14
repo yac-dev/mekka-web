@@ -8,7 +8,7 @@
 
 .reset-password-container {
   background-color: rgb(40, 40, 40);
-  height: 200px;
+  height: 300px;
   width: 600px;
   padding: 20px;
   display: grid;
@@ -16,10 +16,6 @@
   border-radius: 20px;
   /* gridTemplateAreas: "'header' 'content' 'footer'", */
   /* gridTemplateRows: '50px calc(100vh - 100px) 50px'  */
-}
-
-.form-container {
-  /* background-color: blue; */
 }
 
 .form-header-title {
@@ -32,7 +28,7 @@
 .form-header-subtitle {
   text-align: center;
   font-size: 15px;
-  color: rgb(30, 30, 30);
+  color: rgb(150, 150, 150);
 }
 
 /* ここら辺のdefaultのpadding 結構癖あるよな。。。。 */
@@ -41,6 +37,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
+  margin-bottom: 30px;
   /* margin-bottom: 20px; */
   /* padding: 15px 0px; */
 }

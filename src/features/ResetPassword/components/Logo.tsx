@@ -1,10 +1,10 @@
 import React from 'react';
-import LogoImage from '../../../assets/logo192.png';
+import LogoImage from '../../../assets/appstore.png';
 
 export const Logo = () => {
   return (
     <div className='logo-container'>
-      <img src={LogoImage} style={{ width: '100px', height: '100px' }} />
+      <img src={LogoImage} style={{ width: '100px', height: '100px', borderRadius: '20px' }} />
     </div>
   );
 };
